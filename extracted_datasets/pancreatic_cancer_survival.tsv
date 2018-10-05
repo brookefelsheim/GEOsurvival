@@ -1,0 +1,5 @@
+"gse"	"sample_count"	"title"	"type"	"gpl"	"gpl_title"	"manufacturer"
+"GSE57495"	63	"Development of a prognostic gene signature in pancreatic cancer"	"Expression profiling by array"	"GPL15048"	"Rosetta/Merck Human RSTA Custom Affymetrix 2.0 microarray [HuRSTA_2a520709.CDF]"	"Affymetrix"
+"GSE79668"	51	"RNA-sequencing of human pancreatic adenocarcinoma cancer tissues"	"Expression profiling by high throughput sequencing"	"GPL11154"	"Illumina HiSeq 2000 (Homo sapiens)"	NA
+"GSE79670"	51	"RNA sequencing of pancreatic adenocarcinoma tumors yields novel expression patterns associated with long-term survival and reveals a role for *ANGPTL4*"	"Expression profiling by high throughput sequencing"	"GPL11154"	"Illumina HiSeq 2000 (Homo sapiens)"	NA
+"GSE85916"	80	"Patients with human resected pancreatic cancer"	"Expression profiling by array"	"GPL13667"	"[HG-U219] Affymetrix Human Genome U219 Array"	"Affymetrix"

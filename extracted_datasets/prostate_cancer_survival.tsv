@@ -1,0 +1,4 @@
+"gse"	"sample_count"	"title"	"type"	"gpl"	"gpl_title"	"manufacturer"
+"GSE10645"	1192	"Focused gene expression microarray of tumors from 596 men with prostate cancer using RNA from archival FFPE tissue"	"Expression profiling by array"	"GPL5873"	"DASL Custom Prostate Panel by Gene"	"Illumina, Inc."
+"GSE10645"	1192	"Focused gene expression microarray of tumors from 596 men with prostate cancer using RNA from archival FFPE tissue"	"Expression profiling by array"	"GPL5858"	"DASL Human Cancer Panel by Gene"	"Illumina, Inc"
+"GSE16560"	281	"Molecular Sampling of Prostate Cancer: a dilemma for predicting disease progression"	"Expression profiling by array"	"GPL5474"	"Human 6k Transcriptionally Informative Gene Panel for DASL"	"Illumina Inc."
