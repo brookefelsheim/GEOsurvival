@@ -24,9 +24,6 @@
 ## Example 1: Rscript extractSurvivalDatasets.R colon_cancer_survival "colon cancer|colon carcinoma|colon adenocarcinoma|colonic cancer|colonic carcinoma|colonic adenocarcinoma|rectal cancer|rectal carcinoma|rectal adenocarcinoma|CRC|COAD"
 ## Example 2: Rscript extractSurvivlDatasets.R lung_cancer_survival lung_cancer
 
-library(GEOmetadb)
-library(stringr)
-
 args = commandArgs(trailingOnly=TRUE)
 
 output = args[1]
@@ -36,6 +33,10 @@ keywords = args[2]
 # ** note: this will create a large file (approximately 7.28 GB) in the working directory
 if (!file.exists('GEOmetadb.sqlite')) getSQLiteFile()
 con <- dbConnect(SQLite(), 'GEOmetadb.sqlite')
+
+library(GEOmetadb)
+library(stringr)
+
 
 # extract all sample members with characteristics containing survival keywords
 samples_survival <- dbGetQuery(con, paste("SELECT DISTINCT *", "FROM gsm", "WHERE characteristics_ch1 LIKE '%rfs%'", "OR characteristics_ch1 LIKE '%dfs%'", "OR characteristics_ch1 LIKE '%surv%'", "OR characteristics_ch1 LIKE '%dead%'", "OR characteristics_ch1 LIKE '%death%'", "OR characteristics_ch1 LIKE '%os[_]%'", "OR characteristics_ch1 LIKE '%pfs%'", "OR characteristics_ch1 LIKE '%dss%'", "OR characteristics_ch1 LIKE '%alive%'", "OR characteristics_ch1 LIKE '%os[:]%'", "OR characteristics_ch1 LIKE '%vital status%'", "OR characteristics_ch1 LIKE '%dfi%'", "OR characteristics_ch1 LIKE '%pfi%'", "AND organism_ch1='Homo sapiens'"))
