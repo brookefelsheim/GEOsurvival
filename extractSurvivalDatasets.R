@@ -29,13 +29,13 @@ args = commandArgs(trailingOnly=TRUE)
 output = args[1]
 keywords = args[2]
 
+library(GEOmetadb)
+library(stringr)
+
 # extract data from NCBI GEO
 # ** note: this will create a large file (approximately 7.28 GB) in the working directory
 if (!file.exists('GEOmetadb.sqlite')) getSQLiteFile()
 con <- dbConnect(SQLite(), 'GEOmetadb.sqlite')
-
-library(GEOmetadb)
-library(stringr)
 
 
 # extract all sample members with characteristics containing survival keywords
@@ -88,7 +88,7 @@ if (keywords == "lung_cancer") {
 } else if (keywords == "colon_cancer") {
     survival_cancer = subset(gse_expression, grepl("colon cancer|colon carcinoma|colon adenocarcinoma|colonic cancer|colonic carcinoma|colonic adenocarcinoma|rectal cancer|rectal carcinoma|rectal adenocarcinoma|CRC|COAD|READ", title, ignore.case=TRUE))
 } else if (keywords == "prostate_cancer") {
-    survival_cancer = subset(gse_expression, grepl("prostate cancer|prostatic carcinoma|prostate carcinoma|prostate carcinoma|PRAD|prostate adenocarcinoma", title, ignore.case=TRUE))
+    survival_cancer = subset(gse_expression, grepl("prostate cancer|prostatic carcinoma|prostatic adenocarcinoma|prostate carcinoma|PRAD|prostate adenocarcinoma", title, ignore.case=TRUE))
 } else if (keywords == "breast_cancer") {
     survival_cancer = subset(gse_expression, grepl("breast cancer|breast carcinoma|BRCA|breast adenocarcinoma", title, ignore.case=TRUE))
 } else if (keywords == "pancreatic_cancer") {
